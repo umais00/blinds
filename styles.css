@@ -31,7 +31,7 @@ header {
   color: white;
   width: 100vw;
   transition: all 0.2s ease-in;
-  justify-content: center;
+  justify-content: center !important;
 }
 header > ul {
   display: none;
