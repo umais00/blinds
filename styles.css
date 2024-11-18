@@ -1,0 +1,17 @@
+.box {
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+  background: ☐ red;
+}
+.box.small {
+  scale: 0.5;
+}
+.box.moved {
+  translate: 50px;
+}
+.box.rotate {
+  rotate: 45deg;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
