@@ -8,319 +8,24 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <style>
-      :root {
-        --mainColor: #9f8730;
-        --backgroundColor: #0b0b0b;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      /* Default (Desktop First) */
-      html {
-        font-size: 16px; /* Base font size */
-        /* other styles */
-      }
-
-      /* Large screens (Desktops) */
-      @media (min-width: 1200px) {
-        html {
-          font-size: 18px; /* Slightly larger for bigger screens */
-          /* additional styles for large screens */
-        }
-      }
-
-      /* Medium screens (Laptops) */
-      @media (min-width: 992px) and (max-width: 1199px) {
-        html {
-          font-size: 17px;
-          /* additional styles for medium screens */
-        }
-      }
-
-      /* Tablets */
-      @media (min-width: 768px) and (max-width: 991px) {
-        html {
-          font-size: 16px;
-          /* additional styles for tablets */
-        }
-      }
-
-      /* Small screens (Large phones) */
-      @media (min-width: 576px) and (max-width: 767px) {
-        html {
-          font-size: 15px;
-          /* additional styles for large phones */
-        }
-      }
-
-      /* Extra small screens (Small phones) */
-      @media (max-width: 575px) {
-        html {
-          font-size: 14px;
-          /* additional styles for small phones */
-        }
-      }
-
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-          sans-serif;
-        overflow-x: hidden;
-        background-color: var(--backgroundColor);
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 40px;
-        height: 16vh;
-        background-color: var(--backgroundColor);
-        color: white;
-        width: 100vw;
-      }
-      header > ul {
-        width: 60%;
-        height: 100%;
-        list-style: none;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-      header > ul > li {
-        cursor: pointer;
-        position: relative; /* Required for positioning the ::after pseudo-element */
-        padding-bottom: 2px;
-      }
-
-      header > ul > li::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background-color: var(--mainColor);
-        transition: width 0.3s ease; /* Adjust timing and easing here */
-      }
-
-      header > ul > li:hover::after {
-        width: 100%; /* Full underline width on hover */
-      }
-
-      header > ul > li:hover {
-        color: var(--mainColor); /* Change text color on hover */
-      }
-
-      .main-banner {
-        height: 101vh;
-        width: 100vw; /* Fit the viewport width */
-        background-image: url("images/blinds (1).jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        filter: contrast(150%) brightness(50%) blur(4.5px);
-        position: absolute;
-        top: 0;
-        left: 0; /* Align with the left edge */
-        z-index: -9;
-      }
-
-      img[src="blinds stock.png"] {
-        /* transform: scaleX(-1); */
-      }
-      .hero {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        height: 87vh;
-        color: white;
-      }
-      .details h2 {
-        color: var(--mainColor);
-        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-        letter-spacing: 2px;
-        font-size: 3.2rem;
-        font-weight: 200;
-        text-shadow: 2px 2px 2px #0b0b0b;
-      }
-      .web_details {
-        height: 200vh;
-      }
-      .two_cards {
-        height: 80vh;
-        position: relative;
-      }
-      .card1,
-      .card2 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        border-radius: 15px;
-        height: 60vh;
-        width: 48vw;
-      }
-      .card1 {
-        translate: -90% -45%;
-        background-image: url(images/pexels-steve-851238.jpg);
-        background-size: cover;
-        filter: brightness(40%);
-      }
-      .card2 {
-        translate: -10% -55%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: column;
-        padding: 0 20px;
-        position: relative;
-      }
-      .card2image {
-        width: 100%;
-        height: 100%;
-        background-image: url("images/pexels-steve-845248.jpg");
-        background-size: cover;
-        filter: brightness(20%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 15px;
-      }
-      .card2 h2 {
-        font-weight: 500;
-        text-align: justify;
-        position: relative;
-        color: white;
-        z-index: 999;
-      }
-      .card2 button {
-        width: 60%;
-        height: 55px;
-        font-size: 1.2rem;
-        background-color: green;
-        border: 3px solid black;
-        cursor: pointer;
-        box-sizing: content-box;
-        position: relative;
-        z-index: 999;
-      }
-      .card2 button:hover {
-        animation: buttonAnimation 0.3s ease-in-out 0s 1 forwards;
-      }
-
-      @keyframes buttonAnimation {
-        0% {
-        }
-        50% {
-          font-weight: 600;
-          border-bottom: 2.5px solid black;
-          border-right: 2.5px solid black;
-        }
-        100% {
-          font-weight: 700;
-          background-color: rgb(0, 174, 0);
-          border-bottom: 5px solid black;
-          border-right: 5px solid black;
-        }
-      }
-      .swiper {
-        display: flex;
-        justify-content: center;
-      }
-      .slider-wrapper {
-        overflow: hidden;
-        max-width: 1200px;
-        margin: 0 70px 55px;
-      }
-
-      .card-list .card-item {
-        height: auto;
-        color: #fff;
-        user-select: none;
-        padding: 35px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        backdrop-filter: blur(30px);
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        min-height: 400px;
-        gap: 20px;
-      }
-      .card-list .card-item .customer-blinds,
-      .card-list .card-item .review {
-        height: 50%;
-        width: 100%;
-      }
-      .card-list .card-item .review {
-        text-align: justify;
-      }
-      .card-list .card-item .reviewby {
-        width: 100%;
-        background-color: var(--mainColor);
-        border: none;
-        height: 60px;
-        font-size: 1.5rem;
-      }
-
-      .slider-wrapper .swiper-pagination-bullet {
-        background: #fff;
-        height: 13px;
-        width: 13px;
-        opacity: 0.5;
-      }
-
-      .slider-wrapper .swiper-pagination-bullet-active {
-        opacity: 1;
-      }
-
-      .slider-wrapper .swiper-slide-button {
-        color: #fff;
-        margin-top: -55px;
-        transition: 0.2s ease;
-      }
-
-      .slider-wrapper .swiper-slide-button:hover {
-        color: #4658ff;
-      }
-
-      @media (max-width: 768px) {
-        .two_cards {
-          height: 100vh;
-        }
-
-        .card2 {
-          width: 100%;
-          translate: -46.5% -55%;
-          border-radius: 0px;
-        }
-        .card2image {
-          border-radius: 0px;
-        }
-
-        .card1 {
-          display: none;
-        }
-        .card2 {
-        }
-        .slider-wrapper {
-          margin: 0 10px 40px;
-        }
-
-        .slider-wrapper .swiper-slide-button {
-          display: none;
-        }
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <img src="images/Luxe Shades Logo png-02.png" alt="" height="100" />
+      <div class="header">
+        <img src="images/Luxe Shades Logo png-02.png" alt="" height="100" />
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Pricing</li>
+          <li>Contact</li>
+        </ul>
+        <i class="fa-solid fa-bars hamburger"></i>
+      </div>
       <ul>
         <li>Home</li>
         <li>About</li>
@@ -329,6 +34,7 @@
       </ul>
     </header>
     <div class="main-banner"></div>
+    .
     <section class="hero">
       <img src="images/blinds stock.png" alt="" width="41%" />
       <div class="details">
@@ -351,7 +57,9 @@
           <button>Get a quote!</button>
         </div>
       </div>
-      <h1>see what our customers think about us</h1>
+      <h1 style="text-align: center; font-size: 2rem; margin: 50px 0">
+        Reviews
+      </h1>
       <div class="container swiper">
         <div class="slider-wrapper">
           <div class="card-list swiper-wrapper">
@@ -447,38 +155,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Linking custom script -->
-    <script>
-      const swiper = new Swiper(".slider-wrapper", {
-        loop: true,
-        grabCursor: true,
-        spaceBetween: 30,
-
-        // Pagination bullets
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          dynamicBullets: true,
-        },
-
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-        // Responsive breakpoints
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          768: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        },
-      });
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
