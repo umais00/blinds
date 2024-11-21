@@ -43,8 +43,8 @@ header > ul {
   display: flex;
 }
 .twenty_height {
-  height: 20vh;
-  justify-content: space-evenly;
+  height: 25vh;
+  justify-content: space-evenly !important;
 }
 /* Header Styles */
 
@@ -111,6 +111,9 @@ header > ul > li:hover::after {
 
 header > ul > li:hover {
   color: var(--mainColor);
+}
+#logo {
+  height: 100px;
 }
 .hamburger {
   display: none;
@@ -535,7 +538,7 @@ header > ul > li:hover {
   }
 
   .slider-wrapper {
-    margin: 0 20px 40px 0;
+    margin: 0 20px;
   }
 
   .slider-wrapper .swiper-slide-button {
@@ -545,7 +548,7 @@ header > ul > li:hover {
     font-size: 1.5rem;
   }
   .info-cards {
-    height: 200vh;
+    height: 300vh;
   }
   .info-cards > div {
     height: 50%;
@@ -554,6 +557,9 @@ header > ul > li:hover {
   .uppercards,
   .lowercards {
     justify-content: space-evenly;
+  }
+  .best-blinds {
+    text-align: center;
   }
   .couple {
     flex-direction: column;
@@ -592,13 +598,18 @@ header > ul > li:hover {
     display: block !important;
     font-size: 2rem;
   }
+  header {
+    padding: 0 1.2rem 0 0.5rem;
+  }
   .hero {
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 100px;
+    margin-bottom: 10vh;
   }
   .hero img {
     width: 50% !important;
+    min-width: 200px;
   }
   .swiper {
     margin-bottom: 20vh;
@@ -612,9 +623,15 @@ header > ul > li:hover {
   .details h2 {
     font-size: 2.5rem;
   }
+  .info-cards {
+    margin-bottom: 10vh;
+  }
   .info-cards > div {
     width: 100%;
     flex-direction: column;
+  }
+  .card2image {
+    filter: contrast(150%) brightness(25%) blur(4.5px);
   }
   .couple {
     width: 100%;
@@ -622,5 +639,9 @@ header > ul > li:hover {
   .faq {
     width: 95%;
     padding: 0.5rem;
+  }
+  .btn-1 {
+    width: 40% !important;
+    margin-left: 32% !important;
   }
 }
