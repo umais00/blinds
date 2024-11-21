@@ -76,6 +76,10 @@ header > ul > li {
   position: relative;
   padding-bottom: 2px;
 }
+.header > ul > li > a {
+  color: white;
+  text-decoration: none;
+}
 
 .header > ul > li::after {
   content: "";
@@ -103,6 +107,9 @@ header > ul > li::after {
 }
 
 .header > ul > li:hover {
+  color: var(--mainColor);
+}
+#contactanchor:hover {
   color: var(--mainColor);
 }
 header > ul > li:hover::after {
@@ -167,7 +174,7 @@ header > ul > li:hover {
 
 .card1 {
   transform: translate(-90%, -45%);
-  background: url("images/pexels-steve-851238.jpg") center/cover no-repeat;
+  background: url("images/pexels-steve-851238.webp") center/cover no-repeat;
   filter: brightness(40%);
 }
 
@@ -186,7 +193,7 @@ header > ul > li:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("images/pexels-steve-845248.jpg") center/cover no-repeat;
+  background: url("images/pexels-steve-845248.webp") center/cover no-repeat;
   filter: brightness(20%);
   border-radius: 15px;
 }
@@ -344,16 +351,16 @@ header > ul > li:hover {
   background-position: center;
 }
 .uppercards1 {
-  background-image: url(https://basilicaconstruction.ca/wp-content/uploads/2024/07/CUSTOM-DESIGNS-1.jpg);
+  background-image: url(images/CUSTOM-DESIGNS-1.webp);
 }
 .uppercards3 {
-  background-image: url(https://basilicaconstruction.ca/wp-content/uploads/2024/07/shutterstock_2010462515-min-1-scaled.jpg);
+  background-image: url(images/shutterstock_2010462515-min-1-scaled.webp);
 }
 .lowercards2 {
-  background-image: url(https://basilicaconstruction.ca/wp-content/uploads/2024/07/HIGH-QUALITY-TURKISH-1.jpg);
+  background-image: url(images/HIGH-QUALITY-TURKISH-1.webp);
 }
 .lowercards4 {
-  background-image: url(https://basilicaconstruction.ca/wp-content/uploads/2024/07/shutterstock_2340581693-min-1-scaled.jpg);
+  background-image: url(images/shutterstock_2340581693-min-1-scaled.webp);
 }
 .uppercards1:hover {
   filter: brightness(70%);
@@ -368,8 +375,9 @@ header > ul > li:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(https://img.freepik.com/free-photo/empty-room_1048-9901.jpg?t=st=1732000244~exp=1732003844~hmac=f97d9d625802d4e50344ee8a643d0650230fa270169b465f2c462e7d1b42802e&w=1380);
+  background-image: url(images/empty-room.webp);
   background-attachment: fixed;
+  background-size: cover;
   margin-top: 10vh;
   margin-bottom: 10vh;
   text-shadow: 0px 0px 20px rgb(0, 0, 0);
